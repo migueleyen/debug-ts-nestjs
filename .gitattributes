@@ -1,0 +1,3 @@
+# add or commit with LF endings
+*.js text eol=lf
+*.ts text eol=lf
