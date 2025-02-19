@@ -1,13 +1,23 @@
 {
-    // First, fix ESLint errors before formatting
+    // Format Markdown files using markdownlint
+    "[markdown]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll.markdownlint": "explicit"
+        }
+    
+    },
+
+    // ESLint fixes JS/TS errors first before formatting
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": "explicit"
     },
 
-    // default: all .ts .tsx .js .jsx .php .py etc..
+    // default: all extension files .ts .tsx .js .jsx .php .py etc..
     // "editor.defaultFormatter": "esbenp.prettier-vscode",
     // "editor.formatOnSave": true,
 
+    // Prettier formats JS/TS after ESLint fixes
     "[typescript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.formatOnSave": true
@@ -19,5 +29,6 @@
     "[javascriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.formatOnSave": true
-    }
+    },
+
 }
